@@ -6,7 +6,7 @@
 ```SQL
 CREATE TABLE IF NOT EXISTS public.profile
 (
-    id bigint NOT NULL DEFAULT 'nextval('profile_id_seq'::regclass)',
+    id bigserial NOT NULL,
     login character varying(50) COLLATE pg_catalog."default" NOT NULL,
     password character varying(50) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT profile_pkey PRIMARY KEY (id)
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS public.profile
 ```SQL
 CREATE TABLE IF NOT EXISTS public.plane
 (
-    id bigint NOT NULL DEFAULT 'nextval('plane_id_seq'::regclass)',
+    id bigserial NOT NULL,
     mark character varying(50) COLLATE pg_catalog."default" NOT NULL,
     model character varying(50) COLLATE pg_catalog."default" NOT NULL,
     type character varying(50) COLLATE pg_catalog."default" NOT NULL,
