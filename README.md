@@ -1,8 +1,8 @@
 # PlaneCatalogServlet
 
-## Создай БД plane_catalog_list в PostgreSQL (pgAdmin4)
+## Создай БД plane_catalog_list в PostgreSQL (pgAdmin4).
 
-## Добавь таблицу profile
+## Добавь таблицу profile.
 ```SQL
 CREATE TABLE IF NOT EXISTS public.profile
 (
@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS public.profile
 )
 ```
 
-## Добавь таблицу plane
+## Добавь таблицу plane.
 ```SQL
 CREATE TABLE IF NOT EXISTS public.plane
 (
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS public.plane
 )
 ```
 
-## Перейди в директорию, где расположен apache-tomcat, в папке conf найди файл server.xml и добавь внутрь <GlobalNamingResources>. Замени на своё имя пользователя и пароль, который у тебя есть в PostgreSQL. 
+## Перейди в директорию, где расположен apache-tomcat, в папке conf найди файл server.xml и добавь внутрь GlobalNamingResources. Замени на своё имя пользователя и пароль, который у тебя есть в PostgreSQL. 
 ```xml
 <Resource
             name="jdbc/postgresPlanes"
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS public.plane
             maxIdle="10"
             maxWaitMillis="10000"/>
 ```
-## Затем в папке conf найди файл context.xml и добавь внутрь <Context>
+## Затем в папке conf найди файл context.xml и добавь внутрь Context.
 ```xml
 <ResourceLink name="jdbc/postgresPlanes"
                   global="jdbc/postgresPlanes"
